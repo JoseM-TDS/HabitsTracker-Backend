@@ -9,7 +9,12 @@
     "routes": [
         {
             "src": "/(.*)",
-            "dest": "app.js"
+            "dest": "app.js",
+            "methods": ["GET", "POST", "PUT", "DELETE", "PATCH", "OPTIONS"],
+            "headers": {
+                "Access-Control-Allow-Origin": "https://habits-app-frontend.vercel.app",
+                "Access-Control-Allow-Credentials": "true"
+            }
         }
     ],
     "env": {
